@@ -1,0 +1,19 @@
+﻿#container {
+    background-color: #222;
+    display: inline-block;
+    width: 960px;
+    height: 540px;
+    left: 50%;
+}
+
+#buttons {
+    position: absolute;
+    top: 80px;
+    left: 10px;
+}
+
+    #buttons > input {
+        padding: 10px;
+        display: block;
+        margin-top: 5px;
+    }

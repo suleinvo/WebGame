@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -19,16 +20,29 @@ namespace WebGame.Domain
 
     public class Unit
     {
-        public int Id { get; set; }
+        [BsonId]
+        [BsonRequired]
+        public string Name { get; set; }
+        [BsonRequired]
         public double Health { get; set; }
+        [BsonRequired]
         public double Damage { get; set; }
+        [BsonRequired]
         public double Defence { get; set; }
+        [BsonRequired]
         public string DisplayName { get; set; }
+        [BsonRequired]
         public UnitType UnitType { get; set; }
+        [BsonRequired]
         public int Initiative { get; set; }
-
+        [BsonRequired]
+        public Dictionary<string, List<double>> SpritePoints { get; set; }
+        [BsonRequired]
+        public string SpriteLink { get; set; }
+        [BsonIgnore]
         private double _currentHealth;
 
+        [BsonIgnore]
         public double CurrentHealth
         {
             get { return _currentHealth; }
@@ -40,8 +54,10 @@ namespace WebGame.Domain
             }
         }
 
+        [BsonIgnore]
         public bool IsDead { get; private set; }
 
+        [BsonIgnore]
         public Side Side { get; private set; }
 
         public Unit()
@@ -114,6 +130,11 @@ namespace WebGame.Domain
                 return units;
             }
             return null;
+        }
+
+        public override string ToString()
+        {
+            return this.ToJson();
         }
     }
 }

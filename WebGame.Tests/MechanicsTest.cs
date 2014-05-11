@@ -1,7 +1,4 @@
-﻿using System;
-using System.CodeDom;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using WebGame.Domain;
 
 namespace WebGame.Tests
@@ -18,9 +15,8 @@ namespace WebGame.Tests
         {
             _field = new GameField();
 
-            _meleeUnit = new Unit()
+            _meleeUnit = new Unit
             {
-                Id = 1,
                 CurrentHealth = 50,
                 Damage = 20,
                 Defence = 20,
@@ -32,7 +28,6 @@ namespace WebGame.Tests
 
             _rangeUnit = new Unit()
             {
-                Id = 2,
                 CurrentHealth = 40,
                 Damage = 20,
                 Defence = 0,

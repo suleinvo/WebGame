@@ -44,7 +44,7 @@
 
         var frameCount = 0;
 
-        blob.on('frameIndexChange', function (evt) {
+        blob.on('frameIndexChange', function () {
             if (blob.animation() === 'punch' && ++frameCount > 3) {
                 blob.animation('idle');
                 frameCount = 0;
@@ -55,5 +55,6 @@
             blob.animation('punch');
         }, false);
     };
+
     imageObj.src = 'http://www.html5canvastutorials.com/demos/assets/blob-sprite.png';
 });

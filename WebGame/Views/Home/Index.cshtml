@@ -1,5 +1,19 @@
-﻿<script src="/Scripts/game/gemfire.js"></script>    
-    <div id="container"></div>
-    <div id="buttons">
-        <input type="button" id="punch" value="Punch">
-    </div>
+﻿<script src="~/Scripts/jquery.signalR-2.0.3.min.js"></script>
+<script src="~/signalr/hubs"></script>
+<script src="/Scripts/game/gemfire.js"></script>
+
+<div id="container" style="float:left"></div>
+<div id="buttons">
+    <input type="button" id="angel" value="Angel" style ="position: absolute; top: 80px; left: 10px">
+    <input type="button" id="archer" value="Archer" style="position: absolute; top: 160px; left: 10px">
+    <input type ="button" id ="monster" value ="Monster" style ="position: absolute; top: 240px; left: 10px" />
+</div>
+
+<div class="container" style="float: left; margin-left: 50px">
+    <h2>Chat & Log Module</h2>
+    <input type="text" id="message" />
+    <input type="button" id="sendmessage" value="Send" />
+    <input type="hidden" id="displayname" />
+    <ul id="discussion"></ul>
+</div>
+<div style="clear:both"></div>

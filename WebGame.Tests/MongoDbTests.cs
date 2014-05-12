@@ -39,7 +39,7 @@ namespace WebGame.Tests
         [TestMethod]
         public void FindTest()
         {
-            var unit = UnitDb.GetUnit("IceMonster");
+            var unit = UnitDb.GetUnit("Angel");
             Assert.IsNotNull(unit);
         }
     }

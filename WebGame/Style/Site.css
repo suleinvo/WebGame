@@ -1,7 +1,8 @@
 ﻿#container {
     background-color: #222;
+    background-image: url('http://i62.fastpic.ru/big/2014/0513/47/82a1b2361f756546ae69ed2c4bf8d047.png');
     display: inline-block;
-    width: 960px;
+    width: 800px;
     height: 540px;
 }
 

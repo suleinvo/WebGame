@@ -14,8 +14,8 @@ namespace WebGame.Domain
 
     public enum Side
     {
-        LeftSide,
-        RightSide
+        LeftSide = 1,
+        RightSide = -1
     }
 
     public class Unit
@@ -39,6 +39,7 @@ namespace WebGame.Domain
         public Dictionary<string, List<double>> SpritePoints { get; set; }
         [BsonRequired]
         public string SpriteLink { get; set; }
+
         [BsonIgnore]
         private double _currentHealth;
 
@@ -58,7 +59,7 @@ namespace WebGame.Domain
         public bool IsDead { get; private set; }
 
         [BsonIgnore]
-        public Side Side { get; private set; }
+        public Side Side { get; set; }
 
         public Unit()
         {
